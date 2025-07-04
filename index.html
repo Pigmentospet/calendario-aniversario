@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Calendario Aniversario - Pigmentos PET</title>
+  <audio id="clic" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: url('https://drive.google.com/uc?export=download&id=1GaJsamW6z1qLQs7XpFPJNH7uI8YpsjAD') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    #calendario {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .dia {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .dia img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .dia.animado {
+      animation: saltito 1.5s infinite ease-in-out;
+    }
+
+    @keyframes saltito {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="calendario">
+    <!-- Imágenes de los días con tus enlaces -->
+    <div class="dia" data-dia="15"><img src="https://drive.google.com/uc?export=download&id=1wX7Pn0z_2YQKOX8ip3R3POYCoF3Rj7rr" alt="Día 15"></div>
+    <div class="dia" data-dia="16"><img src="https://drive.google.com/uc?export=download&id=1agWow3Xozt77aPYylBPjb7wTp5pJlPm5" alt="Día 16"></div>
+    <div class="dia" data-dia="17"><img src="https://drive.google.com/uc?export=download&id=1Kxp8lptGhH10_43PAXA2aN3z7TzoLsnQ" alt="Día 17"></div>
+    <div class="dia" data-dia="18"><img src="https://drive.google.com/uc?export=download&id=1GEDAqd-YcLvLloOIaJCHD-u8aTaKhx2F" alt="Día 18"></div>
+    <div class="dia" data-dia="19"><img src="https://drive.google.com/uc?export=download&id=1IA3YO8coZzYzYDFALlRlh-BDXHBkKQTu" alt="Día 19"></div>
+    <div class="dia" data-dia="20"><img src="https://drive.google.com/uc?export=download&id=1rw-ZCcweMvVQGiQYRSWARKjX2TP2875W" alt="Día 20"></div>
+    <div class="dia" data-dia="21"><img src="https://drive.google.com/uc?export=download&id=1mwZyjrcw6pTMgw4kDQQ_IcWzDkT3o3qR" alt="Día 21"></div>
+    <div class="dia" data-dia="22"><img src="https://drive.google.com/uc?export=download&id=1vaCkD6pVpuefhDrO_aV7lz5pESTJW2xt" alt="Día 22"></div>
+    <div class="dia" data-dia="23"><img src="https://drive.google.com/uc?export=download&id=1FyFalKRFM5-xcjcGP6fJ-yaKnJNtLxZj" alt="Día 23"></div>
+    <div class="dia" data-dia="24"><img src="https://drive.google.com/uc?export=download&id=1Leg9ifu7yVyVPivW-mAXNANG7UTxjBZB" alt="Día 24"></div>
+    <div class="dia" data-dia="25"><img src="https://drive.google.com/uc?export=download&id=1v-cOKd4OU3Bu09VhN9at72r8GgMLssZT" alt="Día 25"></div>
+    <div class="dia" data-dia="26"><img src="https://drive.google.com/uc?export=download&id=1Mr-WBs8Yq8CCtCJEt9atMS7lipS4l49i" alt="Día 26"></div>
+    <div class="dia" data-dia="27"><img src="https://drive.google.com/uc?export=download&id=1kKsTHBqwIbfOwCL4l2QTxsWLSQR0d5pb" alt="Día 27"></div>
+    <div class="dia" data-dia="28"><img src="https://drive.google.com/uc?export=download&id=1rBDmU496oCqO1QOY2Jioy6E6fu0gXs9I" alt="Día 28"></div>
+    <div class="dia" data-dia="29"><img src="https://drive.google.com/uc?export=download&id=18PeamoalHLXCi6BwOH_l7_gl_JAGg2_Q" alt="Día 29"></div>
+    <div class="dia" data-dia="30"><img src="https://drive.google.com/uc?export=download&id=1LywzSqMUhqQY87gi8jYl-5o6REP2EfRM" alt="Día 30"></div>
+    <div class="dia" data-dia="31"><img src="https://drive.google.com/uc?export=download&id=1xseMaXDKdgtMZW49MZqOToAvDaiUAugS" alt="Día 31"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let hoy = new Date();
+      let mes = hoy.getMonth(); // Julio = 6
+      let diaHoy = hoy.getDate();
+
+      const calendario = document.getElementById("calendario");
+
+      if (mes === 6 && diaHoy >= 15 && diaHoy <= 31) {
+        document.querySelectorAll(".dia").forEach(boton => {
+          const dia = parseInt(boton.dataset.dia);
+          boton.classList.add("animado");
+
+          boton.addEventListener("click", function() {
+            document.getElementById('clic').play();
+
+            if (dia <= diaHoy) {
+              alert(`🎁 ¡Sorpresa desbloqueada del día ${dia}! 🎈`);
+              window.open(`https://drive.google.com/uc?export=download&id=${[
+                '18C_XLItxA96RIvgpqlBhPfZtSlEwqnvN',
+                '1D7-MlypZcv82MhVSXLTsblpgaDbW3UOg',
+                '1hdpENYKCgigr1r2qc8pR0k4lfQUZpUWB',
+                '1Xy8nXyKAFdP_oJclTNG1c4qwFLcdIa3j',
+                '1Sq7CnNKBIb8iIplPV-2mPsr8Sa42rmCT',
+                '15ahmaEZGlcOrlQyANm7CQ_DQ6WJZ-x7b',
+                '1BXhYmDT6lRN_0m_aV175a1W7N-DsdR8Y',
+                '1-IcVTkbtLuIApqLxErFDlfGoihPzIJbz',
+                '1qJX5g9VR2ACE493hy30_kBvsc2BkjgbI',
+                '1TZFPfmDFwNeT0yEQpj1e1pzw5ePICXRs',
+                '15L-5N83s1z4a04V-DIkQMblbO94iYu93',
+                '1CGix90QaXQCa_CaGRuPn8q4HWTVc2WQ_',
+                '16BNAj0tzl4CbBlLu2fsfgrFEJWe_NACi',
+                '1RoARg-LlWIbA-UBtTQLmruTrWMcbRkzW',
+                '1EX1Ejj5oFBTj9qMF2Rk-bRX-bOIJDfDt',
+                '11KHwkbzhb5IdmGc_3TI4ndienDHdIt-v',
+                '1VEtFRlvkzGHRPl7-HxIm5w-LeTAbeQmA'
+              ][dia - 15]}`, "_blank");
+            } else {
+              alert("⏳ ¡Aún no puedes abrir este día! Vuelve más tarde 💌");
+            }
+          });
+
+          if (dia > diaHoy) {
+            boton.style.opacity = 0.6;
+            boton.style.cursor = "not-allowed";
+          }
+        });
+      } else if (mes === 6 && diaHoy > 31) {
+        calendario.innerHTML = "<h2 style='color: white;'>🎉 El calendario terminó. ¡Gracias por celebrar con nosotros! 💖</h2>";
+      } else {
+        calendario.innerHTML = "<h2 style='color: white;'>📅 Activo del 15 al 31 de julio. ¡Vuelve para abrir tu regalo! 🎉</h2>";
+      }
+    });
+  </script>
+</body>
+</html>
