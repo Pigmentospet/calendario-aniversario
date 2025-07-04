@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendario Aniversario - Pigmentos PET</title>
   <style>
     body {
@@ -11,61 +12,62 @@
       background-size: cover;
       font-family: Arial, sans-serif;
     }
+
     #calendario {
       text-align: center;
-    padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.92);
-    max-width: 1000px;
-    margin: 50px auto;
-    border-radius: 16px;
-  }
+      padding: 30px 20px;
+      background: rgba(255, 255, 255, 0.92);
+      max-width: 1000px;
+      margin: 50px auto;
+      border-radius: 16px;
+    }
 
-  #calendario h2 {
-    font-size: 1.8em;
-    margin-bottom: 25px;
-  }
+    #calendario h2 {
+      font-size: 1.8em;
+      margin-bottom: 25px;
+    }
 
-  .contenedor-dias {
-     display: grid;
+    .contenedor-dias {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       justify-items: center;
     }
 
-  .dia {
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
+    .dia {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
 
-  .dia img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 3px solid #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
+    .dia img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
 
-  .dia:hover img {
-    transform: translateY(-6px);
-  }
+    .dia:hover img {
+      transform: translateY(-6px);
+    }
 
-  @media (max-width: 768px) {
-   .contenedor-dias {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 768px) {
+      .contenedor-dias {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .dia img {
-       width: 180px;
-    height: 180px;
-  }
+        width: 160px;
+        height: 160px;
+      }
 
-  #calendario {
-    padding: 20px 10px;
-  }
+      #calendario {
+        padding: 20px 10px;
+      }
 
-  #calendario h2 {
-    font-size: 1.2em;
+      #calendario h2 {
+        font-size: 1.2em;
       }
     }
   </style>
@@ -74,8 +76,8 @@
 
 <div id="calendario">
   <h2>🎉 Calendario Aniversario - Pigmentos PET 🎉</h2>
-
   <div class="contenedor-dias">
+    <!-- Días con imagen y archivo -->
     <div class="dia" data-dia="15" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A1%20CHECK%20LIST%20ANIVERSARIO.pdf?raw=true">
       <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A1%20RENA.jpg?raw=true" alt="Día 15" />
     </div>
@@ -132,12 +134,10 @@
 
 <script>
   const dias = document.querySelectorAll('.dia');
-
   dias.forEach(dia => {
     dia.addEventListener('click', () => {
       const diaNumero = parseInt(dia.dataset.dia);
       const archivo = dia.dataset.archivo;
-
       const hoy = new Date();
       const diaActual = hoy.getDate();
 
