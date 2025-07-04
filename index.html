@@ -27,10 +27,10 @@
 
   .contenedor-dias {
      display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
 
   .dia {
     cursor: pointer;
@@ -38,8 +38,8 @@
   }
 
   .dia img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     border-radius: 12px;
     border: 3px solid #fff;
@@ -51,76 +51,78 @@
   }
 
   @media (max-width: 768px) {
-    .dia img {
-      width: 150px;
-      height: 150px;
-    }
+   .contenedor-dias {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-    .contenedor-dias {
-      grid-template-columns: repeat(2, 1fr); /* en móvil: 2 por fila */
-    }
+      .dia img {
+        width: 150px;
+        height: 150px;
+      }
 
-    #calendario h2 {
-      font-size: 1.4em;
+      #calendario h2 {
+        font-size: 1.4em;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 <body>
 
 <div id="calendario">
   <h2>🎉 Calendario Aniversario - Pigmentos PET 🎉</h2>
- <!-- Días del calendario -->
-  <div class="dia" data-dia="15" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A1%20CHECK%20LIST%20ANIVERSARIO.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A1%20RENA.jpg?raw=true" alt="Día 15" />
-  </div>
-  <div class="dia" data-dia="16" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A2%20DESCUENTO%205.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A2%20BANDERA.jpg?raw=true" alt="Día 16" />
-  </div>
-  <div class="dia" data-dia="17" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A3%20CUIDADOS%20ESTACIONALES.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A3%20HUELLA.jpg?raw=true" alt="Día 17" />
-  </div>
-  <div class="dia" data-dia="18" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A4%202X1%20PLACA.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A4%20HUESO.jpg?raw=true" alt="Día 18" />
-  </div>
-  <div class="dia" data-dia="19" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A5%20MANUAL%20PRIMEROS%20AUXILIOS.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A5%20RECONOCIMIENTO.jpg?raw=true" alt="Día 19" />
-  </div>
-  <div class="dia" data-dia="20" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A6%20ENVIO%20GRATIS.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A6%20REGALO.jpg?raw=true" alt="Día 20" />
-  </div>
-  <div class="dia" data-dia="21" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A7%20RECETARIO%20PET_compressed.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A7%20PASTEL.jpg?raw=true" alt="Día 21" />
-  </div>
-  <div class="dia" data-dia="22" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A8%20DESCUENTO%2010.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A8%20CORAZON.jpg?raw=true" alt="Día 22" />
-  </div>
-  <div class="dia" data-dia="23" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20BINGO%20PET.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20PELOTA.jpg?raw=true" alt="Día 23" />
-  </div>
-  <div class="dia" data-dia="24" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20BINGO%20PET.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A10%20TAZA.jpg?raw=true" alt="Día 24" />
-  </div>
-  <div class="dia" data-dia="25" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20BINGO%20PET.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A11%20PINCELES.jpg?raw=true" alt="Día 25" />
-  </div>
-  <div class="dia" data-dia="26" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A12%20DESCUENTO%2015.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A12%20CONVERSACION.jpg?raw=true" alt="Día 26" />
-  </div>
-  <div class="dia" data-dia="27" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A13%20GUIA%20CELEBREMOS%20JUNTOS.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A13%20COLLAR.jpg?raw=true" alt="Día 27" />
-  </div>
-  <div class="dia" data-dia="28" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A14%20POSTAL%20REGALO.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A14%20CABALLETE.jpg?raw=true" alt="Día 28" />
-  </div>
-  <div class="dia" data-dia="29" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A15%20ALBUM%20PARA%20CELEBRAR%20MOMENTOS.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A15%20GLOBOS.jpg?raw=true" alt="Día 29" />
-  </div>
-  <div class="dia" data-dia="30" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A16%20PLACA%20GRATIS.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A16%20PLACAS.jpg?raw=true" alt="Día 30" />
-  </div>
-  <div class="dia" data-dia="31" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A17%20APRENDIZAJES.pdf?raw=true">
-    <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A17%20MANCHA.jpg?raw=true" alt="Día 31" />
+
+  <div class="contenedor-dias">
+    <div class="dia" data-dia="15" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A1%20CHECK%20LIST%20ANIVERSARIO.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A1%20RENA.jpg?raw=true" alt="Día 15" />
+    </div>
+    <div class="dia" data-dia="16" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A2%20DESCUENTO%205.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A2%20BANDERA.jpg?raw=true" alt="Día 16" />
+    </div>
+    <div class="dia" data-dia="17" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A3%20CUIDADOS%20ESTACIONALES.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A3%20HUELLA.jpg?raw=true" alt="Día 17" />
+    </div>
+    <div class="dia" data-dia="18" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A4%202X1%20PLACA.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A4%20HUESO.jpg?raw=true" alt="Día 18" />
+    </div>
+    <div class="dia" data-dia="19" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A5%20MANUAL%20PRIMEROS%20AUXILIOS.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A5%20RECONOCIMIENTO.jpg?raw=true" alt="Día 19" />
+    </div>
+    <div class="dia" data-dia="20" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A6%20ENVIO%20GRATIS.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A6%20REGALO.jpg?raw=true" alt="Día 20" />
+    </div>
+    <div class="dia" data-dia="21" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A7%20RECETARIO%20PET_compressed.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A7%20PASTEL.jpg?raw=true" alt="Día 21" />
+    </div>
+    <div class="dia" data-dia="22" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A8%20DESCUENTO%2010.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A8%20CORAZON.jpg?raw=true" alt="Día 22" />
+    </div>
+    <div class="dia" data-dia="23" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20BINGO%20PET.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20PELOTA.jpg?raw=true" alt="Día 23" />
+    </div>
+    <div class="dia" data-dia="24" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20BINGO%20PET.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A10%20TAZA.jpg?raw=true" alt="Día 24" />
+    </div>
+    <div class="dia" data-dia="25" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A9%20BINGO%20PET.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A11%20PINCELES.jpg?raw=true" alt="Día 25" />
+    </div>
+    <div class="dia" data-dia="26" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A12%20DESCUENTO%2015.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A12%20CONVERSACION.jpg?raw=true" alt="Día 26" />
+    </div>
+    <div class="dia" data-dia="27" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A13%20GUIA%20CELEBREMOS%20JUNTOS.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A13%20COLLAR.jpg?raw=true" alt="Día 27" />
+    </div>
+    <div class="dia" data-dia="28" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A14%20POSTAL%20REGALO.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A14%20CABALLETE.jpg?raw=true" alt="Día 28" />
+    </div>
+    <div class="dia" data-dia="29" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A15%20ALBUM%20PARA%20CELEBRAR%20MOMENTOS.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A15%20GLOBOS.jpg?raw=true" alt="Día 29" />
+    </div>
+    <div class="dia" data-dia="30" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A16%20PLACA%20GRATIS.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A16%20PLACAS.jpg?raw=true" alt="Día 30" />
+    </div>
+    <div class="dia" data-dia="31" data-archivo="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A17%20APRENDIZAJES.pdf?raw=true">
+      <img src="https://github.com/Pigmentospet/calendario-aniversario/blob/main/A17%20MANCHA.jpg?raw=true" alt="Día 31" />
+    </div>
   </div>
 </div>
 
